@@ -6,8 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.Set;
-
 public class LoginPage extends TestBase {
 
     //Page Factory (OR-Object Repository):
@@ -34,7 +32,7 @@ public class LoginPage extends TestBase {
     }
 
     public boolean validateBellButton(){
-        return bellButton.isDisplayed();
+        return bellButton.isEnabled();
     }
 
     public HomePage login(String username, String password){

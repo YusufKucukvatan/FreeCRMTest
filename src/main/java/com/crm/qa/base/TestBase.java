@@ -21,7 +21,7 @@ public class TestBase {
     public TestBase(){
         try{
             prop=new Properties();
-            FileInputStream ip=new FileInputStream("/Users/yusufkucukvatan/IdeaProjects/FreeCRMTest/src/main/java/com/crm/qa/config/config.properties");
+            FileInputStream ip=new FileInputStream("/Users/yusufkucukvatan/IdeaProjects/FreeCRMTest/src/main/java/com/crm/qa/config/configuration.properties");
             prop.load(ip);
 
         } catch (FileNotFoundException e) {
@@ -44,7 +44,7 @@ public class TestBase {
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);  //We have created TestUtil class in our util package
-        driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAT, TimeUnit.SECONDS); //We have created TestUtil class in our util package
+        driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS); //We have created TestUtil class in our util package
         driver.get(prop.getProperty("url"));
     }
 
